@@ -42,4 +42,12 @@ extension UIView {
             widthAnchor.constraint(equalToConstant: size.height).isActive = true
         }
     }
+    
+    func preencherSuperView(padding: UIEdgeInsets = .zero){
+        preencher(top: superview?.topAnchor,
+                  leading: superview?.leadingAnchor,
+                  trailing: superview?.trailingAnchor,
+                  bottom: superview?.bottomAnchor,
+                  padding: padding)
+    }
 }

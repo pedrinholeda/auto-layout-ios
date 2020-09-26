@@ -21,14 +21,14 @@ class ViewController: UIViewController {
 ////
           view.addSubview(redView)
         
-        redView.preencher(
-            top: view.topAnchor,
-            leading: view.leadingAnchor,
-            trailing: nil,
-            bottom: nil,
-            padding: .init(top: 50, left: 50, bottom: 50, right: 50),
-            size: .init(width: 200, height: 500)
-        )
+//        redView.preencher(
+//            top: view.topAnchor,
+//            leading: view.leadingAnchor,
+//            trailing: view.trailingAnchor,
+//            bottom: view.bottomAnchor
+//        )
+        
+        redView.preencherSuperView(padding: .init(top: 50, left: 50, bottom: 50, right: 50))
 //        view.addSubview(blueView)
 //
 //
