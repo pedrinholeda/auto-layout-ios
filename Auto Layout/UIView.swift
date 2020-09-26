@@ -13,7 +13,8 @@ extension UIView {
                    leading:NSLayoutXAxisAnchor?,
                    trailing:NSLayoutXAxisAnchor?,
                    bottom:NSLayoutYAxisAnchor?,
-                   padding: UIEdgeInsets = .zero) {
+                   padding: UIEdgeInsets = .zero,
+                   size: CGSize = .zero) {
         
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -31,6 +32,14 @@ extension UIView {
         
         if let bottom = bottom {
             bottomAnchor.constraint(equalTo: bottom,constant: -padding.bottom).isActive = true
+        }
+        
+        if size.width != 0 {
+            widthAnchor.constraint(equalToConstant: size.width).isActive = true
+        }
+        
+        if size.height != 0 {
+            widthAnchor.constraint(equalToConstant: size.height).isActive = true
         }
     }
 }
