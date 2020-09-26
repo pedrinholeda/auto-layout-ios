@@ -28,7 +28,11 @@ class ViewController: UIViewController {
 //            bottom: view.bottomAnchor
 //        )
         
-        redView.preencherSuperView(padding: .init(top: 50, left: 50, bottom: 50, right: 50))
+        
+        redView.centralizarSuperView(size: .init(width: 200, height: 200))
+        
+        
+//        redView.preencherSuperView(padding: .init(top: 50, left: 50, bottom: 50, right: 50))
 //        view.addSubview(blueView)
 //
 //

@@ -50,4 +50,26 @@ extension UIView {
                   bottom: superview?.bottomAnchor,
                   padding: padding)
     }
+    
+    func centralizarSuperView( size: CGSize = .zero) {
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        if let superviewCenterX = superview?.centerXAnchor{
+            centerXAnchor.constraint(equalTo: superviewCenterX).isActive = true
+        }
+        
+        if let superviewCenterY = superview?.centerYAnchor{
+            centerYAnchor.constraint(equalTo: superviewCenterY).isActive = true
+        }
+        
+        if size.width != 0 {
+            widthAnchor.constraint(equalToConstant: size.width).isActive = true
+        }
+        
+        if size.height != 0 {
+            widthAnchor.constraint(equalToConstant: size.height).isActive = true
+        }
+        
+        
+    }
 }
